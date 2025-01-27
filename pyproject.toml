@@ -1,0 +1,22 @@
+[project]
+name = "hatch-minimal"
+version = "0.1.0"
+description = "Minimal uv template"
+readme = "README.md"
+authors = [
+    { name = "WriteIt.ai", email = "info@writeit.ai" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.hatch.envs.default]
+python="3.12"
+
+# Test environment
+[tool.hatch.envs.test]
+dependencies = [
+  "pytest==8.3.4",
+]
+
+[tool.hatch.envs.test.scripts]
+unit = "cd src && pytest"
